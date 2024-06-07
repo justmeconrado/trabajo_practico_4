@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facultad de Ciencias Agrarias</title>
+  <link rel="stylesheet" data-th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}" />
+  <link rel="stylesheet" data-th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css}" />
+</head>
+
+<body>
+  <aside class="col-md-3 py-4" data-th:fragment="aside">
+    <h5 class="display-6">Enlaces Útiles</h5>
+    <div class="list-group">
+      <a th:href="@{http://www.biblioteca.fca.unju.edu.ar/}" class="list-group-item list-group-item-action"
+        aria-label="Biblioteca">Biblioteca</a>
+      <a th:href="@{https://www.fca.unju.edu.ar/institucional/calendario/}"
+        class="list-group-item list-group-item-action" aria-label="Calendario Académico">Calendario Académico</a>
+      <a th:href="@{https://virtual.unju.edu.ar/}" class="list-group-item list-group-item-action"
+        aria-label="UNJu Virtual">UNJu Virtual</a>
+      <a th:href="@{https://alumnos.unju.edu.ar/unju/}" class="list-group-item list-group-item-action"
+        aria-label="SIU Guaraní">SIU Guaraní</a>
+      <a th:href="@{https://www.fca.unju.edu.ar/tramites/}" class="list-group-item list-group-item-action"
+        aria-label="Trámites">Trámites</a>
+      <a th:href="@{https://www.fca.unju.edu.ar/docentes/concursos}" class="list-group-item list-group-item-action"
+        aria-label="Concursos Docentes">Concursos Docentes</a>
+    </div>
+  </aside>
+  <script type="text/javascript" data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>
