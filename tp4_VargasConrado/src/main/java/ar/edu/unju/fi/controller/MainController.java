@@ -2,13 +2,11 @@ package ar.edu.unju.fi.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class MainController {
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@GetMapping("/")
 	public String getHomePage() {
 		return "index";
 	}
@@ -18,17 +16,17 @@ public class MainController {
 		return "redirect:/alumno/listado";
 	}
 
-	@RequestMapping(value = "/principal", method = RequestMethod.GET)
+	@GetMapping("/principal")
 	public String getIndexPage() {
 		return "index";
 	}
 
 	@GetMapping("/carrera")
 	public String getCarrerasPage() {
-        return "redirect:/carrera/listado";
+		return "redirect:/carrera/listado";
 	}
 
-	@RequestMapping(value = "/nueva_carrera", method = RequestMethod.GET)
+	@GetMapping("/nueva_carrera")
 	public String getNuevaCarreraPage() {
 		return "nueva_carrera";
 	}
