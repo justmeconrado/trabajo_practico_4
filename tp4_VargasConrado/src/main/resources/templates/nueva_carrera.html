@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+<head data-th-replace="~{layouts/header :: head}">
+<body>
+    <header th:replace="~{layouts/header :: header}"></header>
+
+    <main>
+        <div class="container my-5 col-8">
+            <div class="card"> 
+                <div class="card-body p-5">
+                    <h2 class="text-center display-6 mb-4" th:text="${edicion} ? 'Editar Carrera' : 'Nueva Carrera'"></h2>
+
+                    <form th:object="${carrera}" th:action="${edicion} ? @{/carrera/modificar} : @{/carrera/guardar}" method="post" class="row g-3">
+                        <input type="hidden" field="*{id}"> 
+
+                        <div class="col-md-6">
+                            <label for="codigo" class="form-label">Código:</label>
+                            <input type="text" id="codigo" th:field="*{codigo}" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" id="nombre" th:field="*{nombre}" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="cantidadAnios" class="form-label">Duración (años):</label>
+                            <input type="number" id="cantidadAnios" th:field="*{cantidadAnios}" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="estado" class="form-label">Estado:</label>
+                            <select id="estado" th:field="*{estado}" class="form-select">
+                                <option value="ACTIVO">Activo</option>
+                                <option value="INACTIVO">Inactivo</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-primary me-2">
+                                <i class="fas fa-save"></i> Guardar
+                            </button>
+                            <a th:href="@{/carrera/listado}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="~{layouts/footer :: footer}"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

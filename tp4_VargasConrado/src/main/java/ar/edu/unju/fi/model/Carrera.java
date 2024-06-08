@@ -1,11 +1,17 @@
 package ar.edu.unju.fi.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Carrera {
 	private String codigo;
 	private String nombre;
 	private String cantidadAnios;
 	private String estado;
+	// Constructor por defecto
+	public Carrera() {
 
+	}
 	public Carrera(String codigo, String nombre, String cantidadAnios, String estado) {
 		super();
 		this.codigo = codigo;
@@ -14,10 +20,7 @@ public class Carrera {
 		this.estado = estado;
 	}
 
-	// Constructor por defecto
-	public Carrera() {
-		super();
-	}
+
 
 	// Métodos de acceso y modificación
 	public String getCodigo() {
@@ -50,14 +53,6 @@ public class Carrera {
 
 	public void setEstado(String estado) {
 		this.estado = estado;
-	}
-
-	@Override
-	public String toString() {
-		return "Carrera [codigo=" + codigo + ", nombre=" + nombre + ", cantidadAnios=" + cantidadAnios + ", estado="
-				+ estado + ", getCodigo()=" + getCodigo() + ", getNombre()=" + getNombre() + ", getCantidadAnios()="
-				+ getCantidadAnios() + ", getEstado()=" + getEstado() + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
 	}
 
 }

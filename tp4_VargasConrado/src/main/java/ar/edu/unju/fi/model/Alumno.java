@@ -1,5 +1,7 @@
 package ar.edu.unju.fi.model;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Alumno {
 	private String dni;
 	private String nombre;
@@ -9,7 +11,9 @@ public class Alumno {
 	private String fechaNacimiento;
 	private String domicilio;
 	private String lu;
-
+	// Constructor por defecto
+	public Alumno() {
+	}
 	public Alumno(String dni, String nombre, String apellido, String email, String telefono, String fechaNacimiento,
 			String domicilio, String lu) {
 		super();
@@ -23,10 +27,7 @@ public class Alumno {
 		this.lu = lu;
 	}
 
-	// Constructor por defecto
-	public Alumno() {
-		super();
-	}
+
 
 	// Métodos de acceso y modificación
 
@@ -94,14 +95,4 @@ public class Alumno {
 		this.lu = lu;
 	}
 
-	@Override
-	public String toString() {
-		return "Alumno [dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
-				+ ", telefono=" + telefono + ", fechaNacimiento=" + fechaNacimiento + ", domicilio=" + domicilio
-				+ ", lu=" + lu + ", getDni()=" + getDni() + ", getNombre()=" + getNombre() + ", getApellido()="
-				+ getApellido() + ", getEmail()=" + getEmail() + ", getTelefono()=" + getTelefono()
-				+ ", getFechaNacimiento()=" + getFechaNacimiento() + ", getDomicilio()=" + getDomicilio() + ", getLu()="
-				+ getLu() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
-				+ super.toString() + "]";
-	}
 }

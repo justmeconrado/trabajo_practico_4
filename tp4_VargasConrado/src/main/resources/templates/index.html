@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" lang="es">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Facultad de Ciencias Agrarias</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+<head data-th-replace="~{layouts/header :: head}">
+
 
 <body>
 	<header th:replace="~{layouts/header :: header}"></header>
@@ -15,7 +10,8 @@
 	<div class="container col-10">
 		<div class="row">
 			<main class="col-md-9 py-4">
-				<img src="images/agrarias.jpg" alt="Descripción de la imagen" class="img-fluid">
+				<img src="images/agrarias.jpg" alt="Descripción de la imagen"
+					class="img-fluid">
 				<section class="mb-4" id="acerca-de">
 					<div class="container mt-5">
 						<h2 class="display-5">Facultad de Ciencias Agrarias de la
@@ -87,72 +83,84 @@
 						<div class="row">
 							<div class="col-md-4 mb-4">
 								<div class="card h-100">
-									<img src="images/52anios.JPG" class="card-img-top" alt="Noticia 1">
+									<img src="images/52anios.JPG" class="card-img-top"
+										alt="Noticia 1">
 									<div class="card-body">
 										<h5 class="card-title">¡Felices 52 años!</h5>
 										<p class="card-text">24 Mayo 2024</p>
-										<a href="https://www.fca.unju.edu.ar/extension/noticias/felices-52-anos/"
+										<a
+											href="https://www.fca.unju.edu.ar/extension/noticias/felices-52-anos/"
 											class="btn btn-success">Leer más</a>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 mb-4">
 								<div class="card h-100">
-									<img src="images/flyerdiplo.JPG" class="card-img-top" alt="Noticia 2">
+									<img src="images/flyerdiplo.JPG" class="card-img-top"
+										alt="Noticia 2">
 									<div class="card-body">
 										<h5 class="card-title">Extienden fechas de inscripción
 											para la diplomatura en cultivos andinos, uso y consumo</h5>
 										<p class="card-text">24 Mayo 2024</p>
-										<a href="https://www.fca.unju.edu.ar/extension/noticias/extienden-fechas-de-inscripcion-para-la-diplomatura-en-cultivos-andinos-uso-y-consumo/"
+										<a
+											href="https://www.fca.unju.edu.ar/extension/noticias/extienden-fechas-de-inscripcion-para-la-diplomatura-en-cultivos-andinos-uso-y-consumo/"
 											class="btn btn-success">Leer más</a>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 mb-4">
 								<div class="card h-100">
-									<img src="images/joralmacigos.JPG" class="card-img-top" alt="Noticia 3">
+									<img src="images/joralmacigos.JPG" class="card-img-top"
+										alt="Noticia 3">
 									<div class="card-body">
 										<h5 class="card-title">Brindaron jornadas de almácigos a
 											estudiantes de Primaria</h5>
 										<p class="card-text">23 de Mayo 2024</p>
-										<a href="https://www.fca.unju.edu.ar/extension/noticias/brindaron-jornadas-de-almacigos-a-estudiantes-de-primaria/"
+										<a
+											href="https://www.fca.unju.edu.ar/extension/noticias/brindaron-jornadas-de-almacigos-a-estudiantes-de-primaria/"
 											class="btn btn-success">Leer más</a>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 mb-4">
 								<div class="card h-100">
-									<img src="images/commimportante.PNG" class="card-img-top" alt="Noticia 3">
+									<img src="images/commimportante.PNG" class="card-img-top"
+										alt="Noticia 3">
 									<div class="card-body">
 										<h5 class="card-title">Actividades en Agrarias para el 23
 											de mayo</h5>
 										<p class="card-text">22 de Mayo 2024</p>
-										<a href="https://www.fca.unju.edu.ar/extension/noticias/actividades-en-agrarias-para-el-23-de-mayo/"
+										<a
+											href="https://www.fca.unju.edu.ar/extension/noticias/actividades-en-agrarias-para-el-23-de-mayo/"
 											class="btn btn-success">Leer más</a>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 mb-4">
 								<div class="card h-100">
-									<img src="images/becabelgrano.JPG" class="card-img-top" alt="Noticia 3">
+									<img src="images/becabelgrano.JPG" class="card-img-top"
+										alt="Noticia 3">
 									<div class="card-body">
 										<h5 class="card-title">Becas Belgrano: Acreditan la 1ra
 											cuota para renovantes y habilitan resultados para nuevos
 											postulantes</h5>
 										<p class="card-text">21 de Mayo 2024</p>
-										<a href="https://www.fca.unju.edu.ar/extension/noticias/becas-belgrano-acreditan-la-1ra-cuota-para-renovantes-y-habilitan-resultados-para-nuevos-postulantes/"
+										<a
+											href="https://www.fca.unju.edu.ar/extension/noticias/becas-belgrano-acreditan-la-1ra-cuota-para-renovantes-y-habilitan-resultados-para-nuevos-postulantes/"
 											class="btn btn-success">Leer más</a>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 mb-4">
 								<div class="card h-100">
-									<img src="images/consejosocial.JPG" class="card-img-top" alt="Noticia 3">
+									<img src="images/consejosocial.JPG" class="card-img-top"
+										alt="Noticia 3">
 									<div class="card-body">
 										<h5 class="card-title">Consejo Social de la UNJu informó
 											sobre la situación actual de la institución</h5>
 										<p class="card-text">17 de Mayo 2024</p>
-										<a href="https://www.fca.unju.edu.ar/extension/noticias/consejo-social-de-la-unju-informo-sobre-la-situacion-actual-de-la-institucion/"
+										<a
+											href="https://www.fca.unju.edu.ar/extension/noticias/consejo-social-de-la-unju-informo-sobre-la-situacion-actual-de-la-institucion/"
 											class="btn btn-success">Leer más</a>
 									</div>
 								</div>
@@ -166,7 +174,8 @@
 	</div>
 	<footer th:replace="~{layouts/footer :: footer}"></footer>
 
-	<script type="text/javascript" data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+	<script type="text/javascript"
+		data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 
 </body>
 
