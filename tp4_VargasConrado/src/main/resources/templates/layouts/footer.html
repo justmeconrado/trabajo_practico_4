@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+
+<head data-th-replace="~{layouts/header :: head}"><body>
+	<body>
+		<footer class="container-fluid p-5 bg-success text-white" data-th:fragment="footer">
+			<div class="row">
+				<div class="col-md-4 col-lg-3 mb-4">
+					<h5>Información</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a th:href="@{/}" class="nav-link p-0 text-white">Inicio</a></li>
+						<li class="nav-item mb-2"><a th:href="@{/principal#acerca-de}" class="nav-link p-0 text-white">Sobre Nosotros</a></li>
+						<li class="nav-item mb-2"><a th:href="@{/principal#carreras-pregrado}" class="nav-link p-0 text-white">Carreras</a></li>
+						<li class="nav-item mb-2"><a th:href="@{/principal#noticias}" class="nav-link p-0 text-white">Noticias</a></li>
+						<li class="nav-item mb-2"><a href="mailto:mesadeentrada@fca.unju.edu.ar" class="nav-link p-0 text-white">Contacto</a></li> 
+					</ul>
+				</div>
+	
+				<div class="col-md-4 col-lg-3 mb-4">
+					<h5>Información de Contacto</h5>
+					<address>
+						Alberdi N° 47, S. S. de Jujuy, Jujuy, Argentina<br>
+						<a href="tel:+543884221557" class="text-white">(0388) 4221557</a><br>
+						<a href="mailto:mesadeentrada@fca.unju.edu.ar" class="text-white">mesadeentrada@fca.unju.edu.ar</a>
+					</address>
+	
+					<h5>Seguinos</h5>
+					<ul class="list-unstyled d-flex">
+						<li class="me-3"><a href="https://www.facebook.com/FCAUNJu.Arg" class="text-white" aria-label="Facebook"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+						<li class="me-3"><a href="https://x.com/fca_unju/" class="text-white" aria-label="Twitter"><i class="fa-brands fa-twitter fa-lg"></i></a></li>
+						<li class="me-3"><a href="https://www.instagram.com/fca_unju/" class="text-white" aria-label="Instagram"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+						<li><a href="https://www.youtube.com/c/FacultaddeCienciasAgrariasUNJujuy" class="text-white" aria-label="YouTube"><i class="fa-brands fa-youtube fa-lg"></i></a></li>
+					</ul>
+				</div>
+
+			<div class="col-md-4 col-lg-6 mb-4">
+				<a class="navbar-brand" data-th:href="#"> <img
+					th:src="@{/images/logofca.png}"
+					alt="Logo de la Facultad de Ciencias Agrarias" height="80"
+					class="d-inline-block align-text-top me-2">
+				</a>
+				<div>
+					<h2 class="display-5">Facultad de Ciencias Agrarias</h2>
+					<p class="small">Más de 50 años cultivando conocimiento e
+						investigación</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 py-4 my-4 border-top text-center">
+				<p class="mb-0 text-center">&copy; 2024 Facultad de Ciencias
+					Agrarias. Todos los derechos reservados.</p>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript"
+		data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

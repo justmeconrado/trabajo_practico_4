@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+<head data-th-replace="~{layouts/header :: head}">
+<body>
+	<header th:replace="~{layouts/header :: header}"></header>
+
+	<div class="container my-5 col-xl-8">
+		<div class="card">
+			<div class="card-body p-5">
+				<div class="text-center mt-5">
+					<i class="fa-solid fa-book-open-reader fa-2xl"
+						style="color: #198755;"></i>
+				</div>
+
+				<h2 class="text-center display-6 mb-4">Listado de Carreras</h2>
+
+				<div class="table-responsive">
+					<table class="table table-hover table-striped">
+						<thead>
+							<tr>
+								<th scope="col">Código</th>
+								<th scope="col">Nombre</th>
+								<th scope="col">Duración (años)</th>
+								<th scope="col">Estado</th>
+								<th scope="col">Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="carrera : ${carreras}">
+								<td th:text="${carrera.codigo}"></td>
+								<td th:text="${carrera.nombre}"></td>
+								<td th:text="${carrera.cantidadAnios}"></td>
+								<td th:text="${carrera.estado}"></td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<a th:href="@{/carrera/modificar/}+${carrera.codigo}"
+											class="btn btn-sm btn-outline-primary me-2"> <i
+											class="fas fa-edit"></i> Editar
+										</a> <a th:href="@{/carrera/eliminar/}+${carrera.codigo}"
+											class="btn btn-sm btn-outline-danger"> <i
+											class="fas fa-trash"></i> Eliminar
+										</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h2 class="text-center display-6 mt-5 mb-4">Nueva Carrera</h2>
+				<div class="text-center">
+					<a th:href="@{/carrera/nuevo}" class="btn btn-success"> <i
+						class="fas fa-plus"></i> Agregar Nueva Carrera
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="~{layouts/footer :: footer}"></footer>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
