@@ -4,6 +4,7 @@
 <head th:fragment="head">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" th:href="@{/images/logofca.png}" />
 <title>Facultad de Ciencias Agrarias</title>
 <link rel="stylesheet"
 	data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}" />
@@ -38,25 +39,29 @@
 							<li class="nav-item"><a class="nav-link active"
 								aria-current="page" th:href="@{/}">Inicio</a></li>
 							<li class="nav-item"><a class="nav-link"
-								th:href="@{#acerca-de}">Acerca de</a></li>
+								th:href="@{/principal#acerca-de}">Acerca de</a></li>
 							<li class="nav-item dropdown"><a
 								class="nav-link dropdown-toggle" th:href="@{/}" role="button"
 								data-bs-toggle="dropdown" aria-expanded="false"> Oferta
 									Académica </a>
 								<ul class="dropdown-menu">
 									<li><a class="dropdown-item"
-										th:href="@{#carreras-pregrado}">Carreras de Pregrado</a></li>
-									<li><a class="dropdown-item" th:href="@{#carreras-grado}">Carreras
+										th:href="@{/principal#carreras-pregrado}">Carreras de Pregrado</a></li>
+									<li><a class="dropdown-item" th:href="@{/principal#carreras-grado}">Carreras
 											de Grado</a></li>
 								</ul></li>
 							<li class="nav-item"><a class="nav-link"
-								th:href="@{#noticias}">Noticias</a></li>
+								th:href="@{/principal#noticias}">Noticias</a></li>
 							<li class="nav-item"><a class="nav-link"
 								th:href="@{https://fca.unju.edu.ar/institucional/contacto/}">Contacto</a></li>
 							<li class="nav-item"><a class="nav-link"
 								th:href="@{/alumno}">Alumnos</a></li>
 							<li class="nav-item"><a class="nav-link"
 								th:href="@{/carrera}">Carreras</a></li>
+							<li class="nav-item"><a class="nav-link"
+								th:href="@{/docente}">Docentes</a></li>
+							<li class="nav-item"><a class="nav-link"
+								th:href="@{/materia}">Materias</a></li>
 						</ul>
 					</div>
 				</div>

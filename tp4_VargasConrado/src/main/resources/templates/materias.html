@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+
+<head data-th-replace="~{layouts/header :: head}">
+
+</head>
+<body>
+	<header th:replace="~{layouts/header :: header}"></header>
+
+	<main>
+		<div class="container my-5 col-8">
+			<div class="card">
+				<div class="card-body p-5">
+					<div class="text-center mt-5">
+						<i class="fa-solid fa-book fa-2xl" style="color: #198755;"></i>
+					</div>
+    
+					<h2 class="text-center display-6 mb-4">Listado de Materias</h2>
+
+					<div class="row row-cols-1 row-cols-md-2 g-4 px-5">
+						<div th:each="materia : ${materias}" class="col">
+							<div class="card h-100">
+								<div class="card-body">
+									<div class="text-center mt-5 mb-4">
+										<i class="fa-solid fa-book fa-2xl" style="color: #198755;"></i>
+									</div>
+									<h5 class="card-title"
+										th:text="${materia.nombre}"></h5>
+
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item"><strong>Código:</strong> <span
+											th:text="${materia.codigo}"></span></li>
+										<li class="list-group-item"><strong>Curso:</strong> <span
+											th:text="${materia.curso}"></span></li>
+										<li class="list-group-item"><strong>Cantidad de horas:</strong> <span
+											th:text="${materia.cantidadHoras}"></span></li>
+										<li class="list-group-item"><strong>Modalidad:</strong> <span
+											th:text="${materia.modalidad}"></span></li>
+                      <li class="list-group-item"><strong>Docente:</strong> <span th:text="${materia.docente.nombre} + ' ' + ${materia.docente.apellido}"></span></li>
+
+									</ul>
+
+									<div class="d-flex justify-content-center mt-3">
+										<a th:href="@{/materia/modificar/}+${materia.codigo}"
+											class="btn btn-sm btn-outline-primary me-2"> <i
+											class="fas fa-edit"></i> Editar
+										</a> <a th:href="@{/materia/eliminar/}+${materia.codigo}"
+											class="btn btn-sm btn-outline-danger"> <i
+											class="fas fa-trash"></i> Eliminar
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h2 class="text-center display-6 mt-5 mb-4">Nueva Materia</h2>
+					<div class="text-center">
+						<a th:href="@{/materia/nuevo}" class="btn btn-success"> <i
+							class="fas fa-plus"></i> Agregar Nueva Materia
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer th:replace="~{layouts/footer :: footer}"></footer>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
